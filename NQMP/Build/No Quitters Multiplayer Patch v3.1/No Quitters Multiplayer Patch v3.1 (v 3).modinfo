@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="917a39f3-57f0-4b18-b3cb-c4b7dbfbb41e" version="3">
+  <Properties>
+    <Name>No Quitters Multiplayer Patch v3.1</Name>
+    <Teaser>This is the official mod used for NQ multiplayer competitive games.</Teaser>
+    <Description>This is the official mod used for NQ multiplayer competitive games.
+
+Special thanks to NotQ &amp; Uncanny Luck for all their help making this possible! &lt;3</Description>
+    <Authors>Fruitstrike</Authors>
+    <SpecialThanks>NotQ, Uncanny Luck</SpecialThanks>
+    <HideSetupGame>0</HideSetupGame>
+    <Homepage>https://docs.google.com/document/d/1me025Vepd3qXN5QqQtqakPUuSfQmk8D5Jv15SZp9ly8/edit?usp=sharing</Homepage>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies />
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="9F7463736D0F478A307ED7CF6464824A" import="0">AirRepairChanges.xml</File>
+    <File md5="C47B5ED65305B58E0AFEED28DD75C5E9" import="0">ElDoradoChanges.xml</File>
+    <File md5="512C9F02CE06E0FD1CE1EB08CDBF8CCE" import="0">FrigateChanges.xml</File>
+    <File md5="336A474B2E6FF0F63C5189178E2EA7F7" import="0">InfantryChanges.xml</File>
+    <File md5="BAEFE4647CD56D3B17C496B4E00F5607" import="0">MountedRangedChanges.xml</File>
+    <File md5="74562D5188D60255E74ABF0B0D8B89FE" import="1">CvGameCore_Expansion2.dll</File>
+    <File md5="13C553367E6D3737CDCBDD9E973C6405" import="0">HonorChanges.lua</File>
+    <File md5="25F3AD5D983D2115A2450DB42461F032" import="0">HonorChanges.xml</File>
+    <File md5="F1E0A4B1E965834D9B7C3BE2A2B6E239" import="0">LibertyChanges.xml</File>
+    <File md5="2EA04D180F1A0B24786C80F76EDFEBE5" import="0">IroquoisChanges.xml</File>
+    <File md5="E2033F6639BE2C5FB11D45236B4185D7" import="0">PantheonChanges.xml</File>
+    <File md5="663C65D8654C0CCD229F1308D9DF91BE" import="0">PietyChanges.xml</File>
+    <File md5="FC7530D8C40D0FC86DEC6EB023658E5E" import="0">PlantationChanges.xml</File>
+    <File md5="846EDD0138CE598291166D3185280C64" import="0">ProphetSpawnChanges.xml</File>
+    <File md5="701D475D2B862641B0C49025F22DF2B5" import="0">RemoveAtomicBombs.xml</File>
+    <File md5="E0C43A30E29696A796B13629159EDB8B" import="0">RemoveBlitzFromParadrops.xml</File>
+    <File md5="7F2AD1889D39EDD750F3B5CE32FD93D7" import="0">RemoveRAs.xml</File>
+    <File md5="BEBC4852BF8AFC70BA7D522D71561EB4" import="0">RemoveVenice.xml</File>
+    <File md5="D234ECBBD1DEDA17D172F18A0BC37567" import="0">StealthBomberChanges.xml</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>AirRepairChanges.xml</UpdateDatabase>
+      <UpdateDatabase>ElDoradoChanges.xml</UpdateDatabase>
+      <UpdateDatabase>FrigateChanges.xml</UpdateDatabase>
+      <UpdateDatabase>HonorChanges.xml</UpdateDatabase>
+      <UpdateDatabase>InfantryChanges.xml</UpdateDatabase>
+      <UpdateDatabase>IroquoisChanges.xml</UpdateDatabase>
+      <UpdateDatabase>LibertyChanges.xml</UpdateDatabase>
+      <UpdateDatabase>MountedRangedChanges.xml</UpdateDatabase>
+      <UpdateDatabase>PantheonChanges.xml</UpdateDatabase>
+      <UpdateDatabase>PietyChanges.xml</UpdateDatabase>
+      <UpdateDatabase>ProphetSpawnChanges.xml</UpdateDatabase>
+      <UpdateDatabase>RemoveAtomicBombs.xml</UpdateDatabase>
+      <UpdateDatabase>RemoveBlitzFromParadrops.xml</UpdateDatabase>
+      <UpdateDatabase>RemoveRAs.xml</UpdateDatabase>
+      <UpdateDatabase>RemoveVenice.xml</UpdateDatabase>
+      <UpdateDatabase>StealthBomberChanges.xml</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="HonorChanges.xml">
+      <Name>HonorChanges</Name>
+      <Description>Honor Changes</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>

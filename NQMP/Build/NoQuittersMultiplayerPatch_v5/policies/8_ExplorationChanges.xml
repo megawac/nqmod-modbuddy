@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 5/1/2015 7:29:35 PM -->
+<GameData>
+
+	<!-- Exploration Opener 
+	<Policies>
+		<Update>
+			<Set />
+			<Where Type="" />
+		</Update>
+	</Policies>
+	<Language_en_US>
+		<Update>
+			<Set Text="" />
+			<Where Tag="" />
+		</Update>
+	</Language_en_US>-->
+
+
+	<!-- Naval Tradition -->
+	<!--Policies>
+		<Update>
+			<Set GridX="1" GridY="1" />
+			<Where Type="POLICY_NAVAL_TRADITION" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_NAVAL_TRADITION" />
+	</Policy_PrereqPolicies>
+	<Language_en_US>
+		<Update>
+			<Set Text="" />
+			<Where Tag="" />
+		</Update>
+	</Language_en_US-->
+
+
+	<!-- Maritime Infrastructure -->
+	<!--Policies>
+		<Update>
+			<Set GridX="3" GridY="1" />
+			<Where Type="POLICY_MARITIME_INFRASTRUCTURE" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_MARITIME_INFRASTRUCTURE" />
+	</Policy_PrereqPolicies>
+	<Language_en_US>
+		<Update>
+			<Set Text="" />
+			<Where Tag="" />
+		</Update>
+	</Language_en_US-->
+
+
+	<!-- Merchant Navy -->
+	<!--Policies>
+		<Update>
+			<Set GridX="5" GridY="1" />
+			<Where Type="POLICY_MERCHANT_NAVY" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_MERCHANT_NAVY" />
+	</Policy_PrereqPolicies>
+	<Language_en_US>
+		<Update>
+			<Set Text="" />
+			<Where Tag="" />
+		</Update>
+	</Language_en_US-->
+
+
+	<!-- Navigation School -->
+	<!--Policies>
+		<Update>
+			<Set GridX="2" GridY="2" />
+			<Where Type="POLICY_NAVIGATION_SCHOOL" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_NAVIGATION_SCHOOL" />
+	</Policy_PrereqPolicies>
+	<Language_en_US>
+		<Update>
+			<Set Text="" />
+			<Where Tag="" />
+		</Update>
+	</Language_en_US-->
+
+
+	<!-- Treasure Fleets -->
+	<!--Policies>
+		<Update>
+			<Set GridX="4" GridY="2" />
+			<Where Type="POLICY_TREASURE_FLEETS" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_TREASURE_FLEETS" />
+	</Policy_PrereqPolicies>
+	<Language_en_US>
+		<Update>
+			<Set Text="" />
+			<Where Tag="" />
+		</Update>
+	</Language_en_US-->
+
+
+	<!-- Exploration Finisher -->
+	<!-- NOTE: tooltip is updated in opener -->
+	<!--Policies>
+		<Update>
+			<Set />
+			<Where Type="" />
+		</Update>
+	</Policies-->
+
+
+</GameData>

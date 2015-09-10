@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/30/2015 10:14:12 PM -->
+<GameData>
+	<!-- Remove Research Agreements -->
+	<Technologies>
+		<Update>
+			<Set ResearchAgreementTradingAllowed="false" />
+			<Where Type="TECH_EDUCATION" />
+		</Update>
+	</Technologies>
+	<Language_en_US>
+		<Update>
+			<Set Text="[NEWLINE][NEWLINE]Research Agreements are disabled in NQ games." />
+			<Where Tag="TXT_KEY_DIPLO_RESCH_AGREEMENT_NO_TECH" />
+		</Update>
+	</Language_en_US>
+</GameData>

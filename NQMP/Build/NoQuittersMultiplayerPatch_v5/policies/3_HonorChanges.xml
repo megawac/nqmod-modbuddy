@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/10/2015 1:08:41 AM -->
+<GameData>
+
+
+	<!-- HONOR OPENER -->
+	<Policies>
+		<Update>
+			<Set CultureFromKills="100" CultureFromBarbarianKills="0" />
+			<Where Type="POLICY_HONOR" />
+		</Update>
+	</Policies>
+	<Buildings>
+		<Update>
+			<Where Type="BUILDING_STATUE_ZEUS"/>
+			<Set PolicyBranchType="NULL"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_TEMPLE_ARTEMIS"/>
+			<Set PolicyBranchType="POLICY_BRANCH_HONOR"/>
+		</Update>
+	</Buildings>
+	<Language_en_US>
+		<Delete Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP" />
+		<Row Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Honor[ENDCOLOR] improves the effectiveness of one's army in a variety of ways.[NEWLINE][NEWLINE]Adopting Honor gives a +33% combat bonus VS Barbarians, and notifications will be provided when new Barbarian Encampments spawn in revealed territory. Gain [ICON_CULTURE] Culture for the empire for each enemy unit killed. Unlocks building the Temple of Artemis.[NEWLINE][NEWLINE]Adopting all policies in the Honor tree will grant [ICON_RESEARCH] Science for each enemy unit killed. A Great General appears outside the [ICON_CAPITAL] Capital. Great Generals are earned twice as fast, have +2 [ICON_MOVES] Movement, and can be purchased with [ICON_PEACE] Faith starting in the Industrial Era.</Text>
+		</Row>
+		<Update>
+			<Set Text="All units gain +15% [ICON_STRENGTH] combat strength when attacking cities." />
+			<Where Tag="TXT_KEY_WONDER_STATUE_ZEUS_HELP" />
+		</Update>
+		<Update>
+			<Set Text="Requires Honor. +10% [ICON_FOOD] Growth in all cities. +15% [ICON_PRODUCTION] Production when building ranged units." />
+			<Where Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_HELP" />
+		</Update>
+	</Language_en_US>
+
+
+	<!-- WARRIOR CODE -->
+	<Policies>
+		<Update>
+			<Set GridX="2" GridY="1" BaseFreeUnits="4" GoldFromKills="100" GreatGeneralRateModifier="0" />
+			<Where Type="POLICY_WARRIOR_CODE" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_WARRIOR_CODE" />
+	</Policy_PrereqPolicies>
+	<Policy_FreeUnitClasses>
+		<Delete PolicyType="POLICY_WARRIOR_CODE" UnitClassType="UNITCLASS_GREAT_GENERAL" />
+		<Row>
+			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
+			<UnitClassType>UNITCLASS_WARRIOR</UnitClassType>
+			<Count>2</Count>
+		</Row>
+	</Policy_FreeUnitClasses>
+	<Policy_BuildingClassYieldChanges>
+		<Row>
+			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+	</Policy_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Warrior Code[ENDCOLOR][NEWLINE]4 units are maintenance free, and receive 2 Warriors immediately. Gain [ICON_GOLD] Gold for each enemy unit killed. +1 [ICON_GOLD] Gold from Barracks." />
+			<Where Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" />
+		</Update>
+	</Language_en_US>
+
+	<!-- PROFESSIONAL ARMY -->
+	<Policies>
+		<Update>
+			<Set GridX="4" GridY="1" UnitUpgradeCostMod="0" />
+			<Where Type="POLICY_PROFESSIONAL_ARMY" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_PROFESSIONAL_ARMY" />
+	</Policy_PrereqPolicies>
+	<Policy_BuildingClassProductionModifiers>
+		<Update>
+			<Set ProductionModifier="100" />
+			<Where PolicyType="POLICY_PROFESSIONAL_ARMY" />
+		</Update>
+	</Policy_BuildingClassProductionModifiers>
+	<Policy_BuildingClassCultureChanges>
+		<Row>
+			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<CultureChange>1</CultureChange>
+		</Row>
+	</Policy_BuildingClassCultureChanges>
+	<Policy_BuildingClassYieldChanges>
+		<Row>
+			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+	</Policy_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Professional Army[ENDCOLOR][NEWLINE]Build Barracks, Armories, and Military Academies in half the usual time. +2 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each Barracks." />
+			<Where Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP" />
+		</Update>
+	</Language_en_US>
+
+
+	<!-- MILITARY CASTE -->
+	<Policies>
+		<Update>
+			<Set GridX="5" GridY="2" HappinessPerGarrisonedUnit="0" CulturePerGarrisonedUnit="0" />
+			<Where Type="POLICY_MILITARY_CASTE" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_MILITARY_CASTE" />
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<PrereqPolicy>POLICY_PROFESSIONAL_ARMY</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<Policy_BuildingClassCultureChanges>
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<CultureChange>2</CultureChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+			<CultureChange>2</CultureChange>
+		</Row>
+	</Policy_BuildingClassCultureChanges>
+	<Policy_BuildingClassHappiness>
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+	</Policy_BuildingClassHappiness>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Military Caste[ENDCOLOR][NEWLINE]Walls increase Local City [ICON_HAPPINESS_1] Happiness by 2 and [ICON_CULTURE] Culture by 2. Castles increase Local City [ICON_HAPPINESS_1] Happiness by 1 and [ICON_CULTURE] Culture by 2." />
+			<Where Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" />
+		</Update>
+	</Language_en_US>
+
+
+	<!-- MILITARY TRADITION -->
+	<Policies>
+		<Update>
+			<Set GridX="3" GridY="2" ExpModifier="0" UnitUpgradeCostMod="-33" />
+			<Where Type="POLICY_MILITARY_TRADITION" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_MILITARY_TRADITION" />
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<PrereqPolicy>POLICY_PROFESSIONAL_ARMY</PrereqPolicy>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<PrereqPolicy>POLICY_WARRIOR_CODE</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<Policy_BuildingClassProductionModifiers>
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<ProductionModifier>100</ProductionModifier>
+		</Row>
+	</Policy_BuildingClassProductionModifiers>
+	<Policy_BuildingClassYieldChanges>
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+	</Policy_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Military Tradition[ENDCOLOR][NEWLINE]Gold cost of upgrading Military Units reduced by 33%. Courthouses provide +4 [ICON_FOOD] Food, +4 [ICON_PRODUCTION] Production, and +4 [ICON_GOLD] Gold and are built in half the usual time." />
+			<Where Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" />
+		</Update>
+	</Language_en_US>
+
+
+	<!-- DISCIPLINE -->
+	<Policies>
+		<Update>
+			<Set GridX="1" GridY="2" ExpModifier="50" />
+			<Where Type="POLICY_DISCIPLINE" />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_DISCIPLINE" />
+		<Row>
+			<PolicyType>POLICY_DISCIPLINE</PolicyType>
+			<PrereqPolicy>POLICY_WARRIOR_CODE</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<UnitPromotions_UnitCombats>
+		<Row>
+			<PromotionType>PROMOTION_ADJACENT_BONUS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ADJACENT_BONUS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ADJACENT_BONUS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_PARADROPPER</UnitCombatType>
+		</Row>
+		<Delete PromotionType="PROMOTION_ADJACENT_BONUS" UnitCombatType="UNITCOMBAT_HELICOPTER" />
+		<Delete PromotionType="PROMOTION_ADJACENT_BONUS" UnitCombatType="UNITCOMBAT_NAVALMELEE" />
+		<Delete PromotionType="PROMOTION_ADJACENT_BONUS" UnitCombatType="UNITCOMBAT_SUBMARINE" />
+	</UnitPromotions_UnitCombats>
+	<UnitPromotions>
+		<Update>
+			<Set AdjacentMod="0" CombatPercent="10" />
+			<Where Type="PROMOTION_ADJACENT_BONUS" />
+		</Update>
+	</UnitPromotions>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Discipline[ENDCOLOR][NEWLINE]+10% [ICON_STRENGTH] combat strength for Land Units and military units gain 50% more Experience from combat." />
+			<Where Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" />
+		</Update>
+		<Update>
+			<Set Text="+10% [ICON_STRENGTH] Combat Strength." />
+			<Where Tag="TXT_KEY_PROMOTION_DISCIPLINE_HELP" />
+		</Update>
+	</Language_en_US>
+
+	<!-- HONOR FINISHER -->
+	<!-- *** NOTE: Help text updated with Honor Opener. -->
+	<Policies>
+		<Update>
+			<Set GoldFromKills="0" ScienceFromKills="100" IncludesOneShotFreeUnits="true" GreatGeneralRateModifier="100" />
+			<Where Type="POLICY_HONOR_FINISHER" />
+		</Update>
+	</Policies>
+	<Policy_FreeUnitClasses>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<UnitClassType>UNITCLASS_GREAT_GENERAL</UnitClassType>
+			<Count>1</Count>
+		</Row>
+	</Policy_FreeUnitClasses>
+	<UnitPromotions>
+		<Row>
+			<Type>PROMOTION_QUICK_GENERAL</Type>
+			<Description>TXT_KEY_PROMOTION_QUICK_GENERAL</Description>
+			<Help>TXT_KEY_PROMOTION_QUICK_GENERAL_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<MovesChange>2</MovesChange>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_QUICK_GENERAL</PediaEntry>
+		</Row>
+	</UnitPromotions>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_PROMOTION_QUICK_GENERAL">
+			<Text>Quick General</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_QUICK_GENERAL_HELP">
+			<Text>+2 [ICON_MOVES] Movement.</Text>
+		</Row>
+	</Language_en_US>
+	<UnitPromotions_CivilianUnitType>
+		<Row>
+			<PromotionType>PROMOTION_QUICK_GENERAL</PromotionType>
+			<UnitType>UNIT_GREAT_GENERAL</UnitType>
+		</Row>
+	</UnitPromotions_CivilianUnitType>
+	<Policy_FreePromotions>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<PromotionType>PROMOTION_QUICK_GENERAL</PromotionType>
+		</Row>
+	</Policy_FreePromotions>
+
+</GameData>

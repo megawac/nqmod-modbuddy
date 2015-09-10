@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 4/22/2015 11:14:03 PM -->
+<GameData>
+	
+	<!-- Give all Armored units +100% vs Land units -->
+	<UnitPromotions>
+		<Row>
+			<Type>PROMOTION_ARMORED_VS_LAND_BONUS</Type>
+			<Description>TXT_KEY_PROMOTION_ARMORED_VS_LAND_BONUS</Description>
+			<Help>TXT_KEY_PROMOTION_ARMORED_VS_LAND_BONUS_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_ARMORED_VS_LAND_BONUS</PediaEntry>
+		</Row>
+<!--	<Row>
+			<Type>PROMOTION_ANTI_MOUNTED_II</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_II</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_ANTI_MOUNTED_II</PediaEntry>
+		</Row>		-->
+	</UnitPromotions>
+	<UnitPromotions_Domains>
+		<Row>
+			<PromotionType>PROMOTION_ARMORED_VS_LAND_BONUS</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>100</Modifier>
+		</Row>
+	</UnitPromotions_Domains>
+	
+</GameData>

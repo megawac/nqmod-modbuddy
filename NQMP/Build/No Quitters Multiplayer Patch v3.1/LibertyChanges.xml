@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/13/2015 5:36:58 PM -->
+<GameData>
+	
+	<!-- LIBERTY OPENER -->
+	<Policy_CityYieldChanges>
+		<Row>
+			<PolicyType>POLICY_LIBERTY</PolicyType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Policy_CityYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Liberty[ENDCOLOR] is best for civilizations which desire rapid expansion.[NEWLINE][NEWLINE]Adopting Liberty will provide 1 [ICON_CULTURE] Culture and 1 [ICON_GOLD] Gold in every city. Unlocks building the Pyramids.[NEWLINE][NEWLINE]Adopting all policies in the Liberty tree will grant a free Great Person of your choice near the [ICON_CAPITAL] Capital." />
+			<Where Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP" />
+		</Update>
+	</Language_en_US>
+	
+	
+	<!-- REPUBLIC [no changes] -->
+
+
+	<!-- CITIZENSHIP [no changes] -->
+
+
+	<!-- COLLECTIVE RULE [no changes] -->
+
+
+	<!-- REPRESENTATION [no changes] -->
+
+
+	<!-- MERITOCRACY -->
+	<Policies>
+		<Update>
+			<Set CityConnectionTradeRouteGoldModifier="25" />
+			<Where Type="POLICY_MERITOCRACY" />
+		</Update>
+	</Policies>
+	<Language_en_US>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Happiness for each City you own [ICON_CONNECTED] connected to the [ICON_CAPITAL] Capital and -5% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities. Provides a 25% [ICON_GOLD] Gold bonus from city connections (road and/or harbor connections between a capital city and other cities)." />
+			<Where Tag="TXT_KEY_POLICY_MERITOCRACY_HELP" />
+		</Update>
+	</Language_en_US>
+
+
+	<!-- LIBERTY FINISHER [no changes] -->
+
+
+</GameData>

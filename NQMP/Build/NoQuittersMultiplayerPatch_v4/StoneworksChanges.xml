@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 4/22/2015 10:50:33 PM -->
+<GameData>
+	
+	<!-- Allow Stoneworks on Plains -->
+	<Buildings>
+		<Update>
+			<Set ProhibitedCityTerrain="NULL" />
+			<Where BuildingClass="BUILDINGCLASS_STONE_WORKS" />
+		</Update>
+	</Buildings>
+	<Language_en_US>
+		<Update>
+			<Set Text="Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked by this City produce +1 [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry." />
+			<Where Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP" />
+		</Update>
+	</Language_en_US>
+
+</GameData>

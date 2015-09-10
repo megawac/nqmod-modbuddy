@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 4/14/2015 11:57:31 AM -->
+<GameData>
+	
+	<!-- *** CHANGE EXISTING PANTHEONS *** -->
+	
+	<!-- Ancestor Worship: Now +2 Culture for Shrines (up from +1) -->
+	<Belief_BuildingClassYieldChanges>
+		<Update>
+			<Set YieldChange="2" />
+			<Where BeliefType="BELIEF_ANCESTOR_WORSHIP" BuildingClassType="BUILDINGCLASS_SHRINE" YieldType="YIELD_CULTURE" />
+		</Update>
+	</Belief_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Shrines" />
+			<Where Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP" />
+		</Update>
+	</Language_en_US>
+	
+	<!-- Dance of the Aurora: Now works on all Tundra tiles (instead of just non-Forested Tundra tiles) -->
+	<!-- The gameplay fix is done completely in the C++ code -->
+	<Language_en_US>
+		<Update>
+			<Set Text="+1 [ICON_PEACE] Faith from Tundra tiles" />
+			<Where Tag="TXT_KEY_BELIEF_DANCE_AURORA" />
+		</Update>
+	</Language_en_US>
+
+	<!-- Fertility Rites: +20% Growth (up from +10%) and now also provides +1 Happiness in cities with Population 10+ -->
+	<Beliefs>
+		<Update>
+			<Set CityGrowthModifier="20" MinPopulation="10" HappinessPerCity="1" />
+			<Where Type="BELIEF_FERTILITY_RITES" />
+		</Update>
+	</Beliefs>
+	<Language_en_US>
+		<Update>
+			<Set Text="20% faster [ICON_FOOD] Growth Rate (excess Food) and +1 [ICON_HAPPINESS_1] Happiness from cities with population of 10+" />
+			<Where Tag="TXT_KEY_BELIEF_FERTILITY_RITES" />
+		</Update>
+	</Language_en_US>
+
+	<!-- God of Craftsmen: No population requirement (down from Population 3+) -->
+	<Beliefs>
+		<Update>
+			<Set MinPopulation="0" />
+			<Where Type="BELIEF_GOD_CRAFTSMEN" />
+		</Update>
+	</Beliefs>
+	<Language_en_US>
+		<Update>
+			<Set Text="+1 [ICON_PRODUCTION] Production in each city" />
+			<Where Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN" />
+		</Update>
+	</Language_en_US>
+
+	<!-- God of War: Range increased to 10 tiles (up from 4), Faith amount doubled, and now also provides +1 Production from Barracks -->
+	<Beliefs>
+		<Update>
+			<Set FaithFromKills="100" MaxDistance="10" />
+			<Where Type="BELIEF_GOD_WAR" />
+		</Update>
+	</Beliefs>
+	<Belief_BuildingClassYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_GOD_WAR</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+	</Belief_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="Barracks provide +1 [ICON_PRODUCTION] Production and gain [ICON_PEACE] Faith if you kill an enemy unit within 10 tiles of your city" />
+			<Where Tag="TXT_KEY_BELIEF_GOD_WAR" />
+		</Update>
+	</Language_en_US>
+	
+	<!-- God-King: Now also provides +1 Food and +1 Happiness from the Palace -->
+	<Belief_BuildingClassYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_GOD_KING</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+	</Belief_BuildingClassYieldChanges>
+	<Belief_BuildingClassHappiness>
+		<Row>
+			<BeliefType>BELIEF_GOD_KING</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+	</Belief_BuildingClassHappiness>
+	<Language_en_US>
+		<Update>
+			<Set Text="Palace provides +1 each of [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PEACE] Faith, [ICON_GOLD] Gold, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science, and [ICON_HAPPINESS_1] Happiness" />
+			<Where Tag="TXT_KEY_BELIEF_GOD_KING" />
+		</Update>
+	</Language_en_US>
+
+	<!-- Goddess of Love: Population requirement reduced to 4+ (from 6+) -->
+	<Beliefs>
+		<Update>
+			<Set MinPopulation="4" />
+			<Where Type="BELIEF_GODDESS_LOVE" />
+		</Update>
+	</Beliefs>
+	<Language_en_US>
+		<Update>
+			<Set Text="+1 [ICON_HAPPINESS_1] Happiness from cities with population of 4+" />
+			<Where Tag="TXT_KEY_BELIEF_GODDESS_LOVE" />
+		</Update>
+	</Language_en_US>
+
+	<!-- Goddess of Protection: Now also provides +2 Faith from Walls -->
+	<Belief_BuildingClassYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_GODDESS_STRATEGY</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+	</Belief_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="Cities gain +30% [ICON_RANGE_STRENGTH] Ranged Combat Strength and Walls provide +2 [ICON_PEACE] Faith" />
+			<Where Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY" />
+		</Update>
+	</Language_en_US>
+
+	<!-- Monument to the Gods: +20% production boost (up from +15%) -->
+	<Beliefs>
+		<Update>
+			<Set WonderProductionModifier="20" />
+			<Where Type="BELIEF_MONUMENT_GODS" />
+		</Update>
+	</Beliefs>
+	<Language_en_US>
+		<Update>
+			<Set Text="+20% [ICON_PRODUCTION] Production of Ancient/Classical Wonders" />
+			<Where Tag="TXT_KEY_BELIEF_MONUMENT_GODS" />
+		</Update>
+	</Language_en_US>
+
+	<!-- Religious Settlements: +25% border growth (up from +15%) and now also provides +1 Food per city -->
+	<Beliefs>
+		<Update>
+			<Set PlotCultureCostModifier="-25" />
+			<Where Type="BELIEF_RELIGIOUS_SETTLEMENTS" />
+		</Update>
+	</Beliefs>
+	<Belief_CityYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_RELIGIOUS_SETTLEMENTS</BeliefType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_CityYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="+1 [ICON_FOOD] Food and +25% faster border growth in each city" />
+			<Where Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS" />
+		</Update>
+	</Language_en_US>
+
+	<!-- Sacred Waters: Now also provides +1 Production from Water Mills -->
+	<Belief_BuildingClassYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_SACRED_WATERS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+	</Belief_BuildingClassYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="+1 [ICON_HAPPINESS_1] Happiness from cities on rivers and Watermills provide +1 [ICON_PRODUCTION] Production" />
+			<Where Tag="TXT_KEY_BELIEF_SACRED_WATERS" />
+		</Update>
+	</Language_en_US>
+
+
+	<!-- *** ADD NEW PANTHEONS *** -->
+
+	<!-- Daughter of Autumn: +1 Production from Plantations -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_DAUGHTER_AUTUMN</Type>
+			<Description>TXT_KEY_BELIEF_DAUGHTER_AUTUMN</Description>
+			<ShortDescription>TXT_KEY_BELIEF_DAUGHTER_AUTUMN_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_ImprovementYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_DAUGHTER_AUTUMN</BeliefType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_ImprovementYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_DAUGHTER_AUTUMN">
+			<Text>+1 [ICON_PRODUCTION] Production from Plantations</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_DAUGHTER_AUTUMN_SHORT">
+			<Text>Daughter of Autumn</Text>
+		</Row>
+	</Language_en_US>
+
+	<!-- Gifts of Wisdom: +1 Culture and +1 Faith for each Sugar and Cocoa -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_GIFTS_WISDOM</Type>
+			<Description>TXT_KEY_BELIEF_GIFTS_WISDOM</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GIFTS_WISDOM_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_ResourceYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_GIFTS_WISDOM</BeliefType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GIFTS_WISDOM</BeliefType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GIFTS_WISDOM</BeliefType>
+			<ResourceType>RESOURCE_COCOA</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GIFTS_WISDOM</BeliefType>
+			<ResourceType>RESOURCE_COCOA</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_ResourceYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_GIFTS_WISDOM">
+			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Sugar and Cocoa</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GIFTS_WISDOM_SHORT">
+			<Text>Gifts of Wisdom</Text>
+		</Row>
+	</Language_en_US>
+
+	<!-- Goddess of Weaving: +1 Culture and +1 Faith for each Silk and Cotton -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_GODDESS_WEAVING</Type>
+			<Description>TXT_KEY_BELIEF_GODDESS_WEAVING</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GODDESS_WEAVING_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_ResourceYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_GODDESS_WEAVING</BeliefType>
+			<ResourceType>RESOURCE_SILK</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GODDESS_WEAVING</BeliefType>
+			<ResourceType>RESOURCE_SILK</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GODDESS_WEAVING</BeliefType>
+			<ResourceType>RESOURCE_COTTON</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GODDESS_WEAVING</BeliefType>
+			<ResourceType>RESOURCE_COTTON</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_ResourceYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_WEAVING">
+			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Silk and Cotton</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_WEAVING_SHORT">
+			<Text>Goddess of Weaving</Text>
+		</Row>
+	</Language_en_US>
+
+	<!-- Nature's Blessing: +1 Faith from Forest Tiles -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_NATURES_BLESSING</Type>
+			<Description>TXT_KEY_BELIEF_NATURES_BLESSING</Description>
+			<ShortDescription>TXT_KEY_BELIEF_NATURES_BLESSING_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_FeatureYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_NATURES_BLESSING</BeliefType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_FeatureYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_NATURES_BLESSING">
+			<Text>+1 [ICON_PEACE] Faith from Forest tiles</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_NATURES_BLESSING_SHORT">
+			<Text>Nature's Blessing</Text>
+		</Row>
+	</Language_en_US>
+
+	<!-- Rite of Spring: +1 Food from Plantations -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_RITE_SPRING</Type>
+			<Description>TXT_KEY_BELIEF_RITE_SPRING</Description>
+			<ShortDescription>TXT_KEY_BELIEF_RITE_SPRING_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_ImprovementYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_RITE_SPRING</BeliefType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_ImprovementYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_RITE_SPRING">
+			<Text>+1 [ICON_FOOD] Food from Plantations</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RITE_SPRING_SHORT">
+			<Text>Rite of Spring</Text>
+		</Row>
+	</Language_en_US>
+
+	<!-- Ritualistic Tattoos: +2 Culture for each Dyes -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_RITUAL_TATTOOS</Type>
+			<Description>TXT_KEY_BELIEF_RITUAL_TATTOOS</Description>
+			<ShortDescription>TXT_KEY_BELIEF_RITUAL_TATTOOS_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_ResourceYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_RITUAL_TATTOOS</BeliefType>
+			<ResourceType>RESOURCE_DYE</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Belief_ResourceYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_RITUAL_TATTOOS">
+			<Text>+2 [ICON_CULTURE] Culture for each Dyes resource</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RITUAL_TATTOOS_SHORT">
+			<Text>Ritualistic Tattoos</Text>
+		</Row>
+	</Language_en_US>
+
+	<!-- Spirit Animals: +1 Faith for each Horse, Deer, Ivory, Fur, and Bison -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_SPIRIT_ANIMALS</Type>
+			<Description>TXT_KEY_BELIEF_SPIRIT_ANIMALS</Description>
+			<ShortDescription>TXT_KEY_BELIEF_SPIRIT_ANIMALS_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_ResourceYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_SPIRIT_ANIMALS</BeliefType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_SPIRIT_ANIMALS</BeliefType>
+			<ResourceType>RESOURCE_DEER</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_SPIRIT_ANIMALS</BeliefType>
+			<ResourceType>RESOURCE_IVORY</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_SPIRIT_ANIMALS</BeliefType>
+			<ResourceType>RESOURCE_FUR</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_SPIRIT_ANIMALS</BeliefType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_ResourceYieldChanges>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_SPIRIT_ANIMALS">
+			<Text>+1 [ICON_PEACE] Faith for each Horse, Deer, Ivory, Fur, and Bison</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SPIRIT_ANIMALS_SHORT">
+			<Text>Spirit Animals</Text>
+		</Row>
+	</Language_en_US>
+
+
+	<!-- Wayshrines: +1 Faith and +1 Gold for each city connection -->
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_WAYSHRINES</Type>
+			<Description>TXT_KEY_BELIEF_WAYSHRINES</Description>
+			<ShortDescription>TXT_KEY_BELIEF_WAYSHRINES_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+	</Beliefs>
+	<Belief_YieldChangeTradeRoute>
+		<Row>
+			<BeliefType>BELIEF_WAYSHRINES</BeliefType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_WAYSHRINES</BeliefType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_YieldChangeTradeRoute>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_WAYSHRINES">
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_GOLD] Gold for each [ICON_CONNECTED] City Connection</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_WAYSHRINES_SHORT">
+			<Text>Wayshrines</Text>
+		</Row>
+	</Language_en_US>
+
+</GameData>

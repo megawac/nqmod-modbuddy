@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 5/2/2015 4:47:24 AM -->
+<GameData>
+	
+	<Buildings>
+		<Update>
+			<Set NumTradeRouteBonus="1" />
+			<Where Type="BUILDING_NATIONAL_TREASURY" />
+		</Update>
+	</Buildings>
+	<Building_YieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+	</Building_YieldModifiers>
+	<Language_en_US>
+		<Update>
+			<Set Text="Must have built a Market in all Cities. The cost goes up the more cities there are in the empire. Gain an additional trade route slot and +25% [ICON_GOLD] Gold in the city in which it is built. Trade routes other players make to a city with an East India Company will generate an extra 4 [ICON_GOLD] Gold for the city owner and the trade route owner gains an additional 2 [ICON_GOLD] Gold." />
+			<Where Tag="TXT_KEY_BUILDING_NATIONAL_TREASURY_HELP" />
+		</Update>
+	</Language_en_US>
+	
+</GameData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 4/14/2015 5:06:15 PM -->
+<GameData>
+	<BuildFeatures>
+		<Delete BuildType="BUILD_PLANTATION" FeatureType="FEATURE_JUNGLE" />
+		<!--
+		<Update>
+			<Set Remove="false" />
+			<Where BuildType="BUILD_PLANTATION" FeatureType="FEATURE_JUNGLE" />
+		</Update>
+		-->
+	</BuildFeatures>
+</GameData>
